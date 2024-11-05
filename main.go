@@ -46,7 +46,7 @@ func Decrypt(key, iv, ciphertext, privateKey string) (string, error) {
 	}
 
 	// DEcode decodedKey from base64
-	decryptedKey_decoded, err = base64.StdEncoding.DecodeString(decryptedKey)
+	decryptedKey_decoded, err := base64.StdEncoding.DecodeString(decryptedKey)
 	if err != nil {
 		return "", err
 	}
