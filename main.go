@@ -44,6 +44,12 @@ func Decrypt(key, iv, ciphertext, privateKey string) (string, error) {
 	if err != nil {
 		return "", err
 	}
+
+	// DEcode decodedKey from base64
+	decryptedKey_decoded, err = base64.StdEncoding.DecodeString(decryptedKey)
+	if err != nil {
+		return "", err
+	}
 	
 	// Decode the iv and ciphertext from base64
 	iv_decoded, err := base64.StdEncoding.DecodeString(iv)
@@ -57,7 +63,7 @@ func Decrypt(key, iv, ciphertext, privateKey string) (string, error) {
 	}
 
 	// Decrypt the message with AES
-	plaintext, err := aes.Decrypt([]byte(decryptedKey), iv_decoded, ciphertext_decoded)
+	plaintext, err := aes.Decrypt(decryptedKey_decoded, iv_decoded, ciphertext_decoded)
 	if err != nil {
 		return "", err
 	}
