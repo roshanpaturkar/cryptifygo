@@ -24,7 +24,7 @@ go get github.com/roshanpaturkar/cryptifygo
 ### Cross Platform Compatibility Table
 | Platform | Compatible Version | Library |
 | --- | --- | --- |
-| Go | v1.2.0 | [cryptifygo](https://pkg.go.dev/github.com/roshanpaturkar/cryptifygo@v1.2.0#section-readme)
+| Go | v1.0.7 | [cryptifygo](https://pkg.go.dev/github.com/roshanpaturkar/cryptifygo@v1.0.7#section-readme)
 | Node.js | 2.0.0 | [cryptify-js](https://www.npmjs.com/package/cryptify-js)
 
 ## Encryption Approach
